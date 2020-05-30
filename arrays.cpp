@@ -20,12 +20,16 @@ class Animal {// parent class is called the base class, child class is called de
     private:
         string name;
         const bool isAlive;
+    protected:
+        char gender = 'M';
 };
 
 class Mammal : public Animal {// base classes can be specified in comma-separated list
     public:
         Mammal() {}
-        string name;
+        char getGender() {
+            return gender;
+        }
 };
 
 int main() {
@@ -41,9 +45,13 @@ int main() {
 
     cout << dog.getName() << endl;
     cout << dog.legs << endl;
+    cout << endl;
 
     Mammal whale;
     whale.eat();
+    cout << whale.getGender() << endl;
+    whale.setName("Fish");
+    cout << whale.getName() << endl;
 
     return 0;
 }
