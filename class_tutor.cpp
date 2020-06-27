@@ -34,7 +34,9 @@ class Fish : public Animal {
             return "Hi, I am " + name;
         }
 };
-
+/*
+You have different classes with a function of the same name, and even the same parameters, but different implementations
+*/
 int main() {// The derived class needs its base class in order to work
     Mammal whale;// polymorphism means having many forms
     Fish silurus;
